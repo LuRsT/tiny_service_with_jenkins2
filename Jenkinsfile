@@ -1,7 +1,10 @@
 node {
-    checkout scm
 
-    step {
+    stage("Checkout") {
+        checkout scm
+    }
+
+    stage("Run") {
         sh "python app.py"
     }
 }
